@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granadeño, B&P, Asociados S.A. de C.V. | Contabilidad, Consultoría y Auditoría</title>
+    <!-- Fuentes profesionales de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy-dark: #061830;
+            --navy-primary: #0b2545;
+            --navy-light: #13315c;
+            --gold-accent: #c59b27;
+            --gold-hover: #d8ae37;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Merriweather', serif;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        header {
+            background-color: var(--navy-dark);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            background: var(--white);
+            padding: 6px 14px;
+            border-radius: 6px;
+        }
+
+        .brand-logo img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-accent);
+        }
+
+        .btn-cotizar-nav {
+            background-color: var(--gold-accent);
+            color: var(--navy-dark) !important;
+            padding: 10px 22px;
+            border-radius: 5px;
+            font-weight: 700 !important;
+            transition: background 0.3s !important;
+        }
+
+        .btn-cotizar-nav:hover {
+            background-color: var(--gold-hover);
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--white);
+            font-size: 1.6rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(135deg, rgba(6, 24, 48, 0.96) 0%, rgba(19, 49, 92, 0.92) 100%),
+                        url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 110px 25px 100px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            color: var(--gold-accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            line-height: 1.25;
+            margin-bottom: 22px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            margin-bottom: 18px;
+        }
+
+        .hero-actions {
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--gold-accent);
+            color: var(--navy-dark);
+            padding: 14px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: var(--white);
+            padding: 14px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, border-color 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--white);
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .hero-card .logo-box {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .hero-card .logo-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero-stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 20px;
+        }
+
+        .stat-item h4 {
+            color: var(--gold-accent);
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .stat-item span {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+        }
+
+        /* --- SECCIONES GENERALES --- */
+        section {
+            padding: 90px 25px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 60px;
+        }
+
+        .section-subtitle {
+            color: var(--gold-accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--navy-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* --- IDENTIDAD INSTITUCIONAL, MISIÓN, VISIÓN Y VALORES --- */
+        .about-bg {
+            background-color: var(--bg-light);
+        }
+
+        .identity-box {
+            background: var(--white);
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(6, 24, 48, 0.06);
+            border-left: 5px solid var(--navy-primary);
+            margin-bottom: 40px;
+        }
+
+        .identity-box h3 {
+            color: var(--navy-dark);
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+        }
+
+        .identity-box p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .mv-card {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mv-card i {
+            font-size: 2.2rem;
+            color: var(--gold-accent);
+            margin-bottom: 18px;
+        }
+
+        .mv-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 14px;
+        }
+
+        .mv-card p {
+            color: #cbd5e1;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 20px;
+        }
+
+        .value-item {
+            background: var(--white);
+            padding: 28px 22px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .value-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(11, 37, 69, 0.08);
+            color: var(--navy-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.2rem;
+        }
+
+        .value-item h4 {
+            color: var(--navy-dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .value-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- SERVICIOS --- */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            margin-bottom: 60px;
+        }
+
+        .pillar-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 35px 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pillar-card:hover {
+            border-color: var(--navy-primary);
+            box-shadow: 0 15px 35px rgba(6, 24, 48, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .pillar-card .icon-box {
+            width: 56px;
+            height: 56px;
+            background: var(--navy-dark);
+            color: var(--gold-accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 22px;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.25rem;
+            color: var(--navy-dark);
+            margin-bottom: 14px;
+        }
+
+        .pillar-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        .btn-ver-mas {
+            color: var(--navy-primary);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.92rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .btn-ver-mas:hover {
+            color: var(--gold-accent);
+        }
+
+        .services-list-box {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+        }
+
+        .services-list-box h3 {
+            color: var(--navy-dark);
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        .services-checklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 18px;
+            list-style: none;
+        }
+
+        .services-checklist li {
+            background: var(--white);
+            padding: 16px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-weight: 500;
+            color: var(--navy-dark);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .services-checklist i {
+            color: var(--gold-accent);
+            font-size: 1.1rem;
+        }
+
+        /* --- POR QUÉ ELEGIRNOS / PROPUESTA DE VALOR --- */
+        .why-us {
+            background-color: var(--navy-dark);
+            color: var(--white);
+        }
+
+        .why-us .section-header h2 {
+            color: var(--white);
+        }
+
+        .why-us .section-header p {
+            color: #cbd5e1;
+        }
+
+        .why-intro {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            text-align: center;
+            color: #e2e8f0;
+            font-size: 1.05rem;
+        }
+
+        .why-intro p {
+            margin-bottom: 16px;
+        }
+
+        .pillars-value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .value-pillar {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 35px;
+            border-radius: 12px;
+        }
+
+        .value-pillar h3 {
+            color: var(--gold-accent);
+            font-size: 1.35rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .value-pillar p {
+            color: #cbd5e1;
+            font-size: 0.96rem;
+        }
+
+        /* --- EQUIPO DE SOCIOS (SOLO IMÁGENES) --- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(6, 24, 48, 0.08);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            object-position: top center;
+            background-color: #e2e8f0;
+            display: block;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #041021;
+            color: #94a3b8;
+            padding: 60px 25px 30px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.3fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-logo {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+
+        .footer-logo img {
+            height: 55px;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 11px;
+            word-break: break-word;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-accent);
+        }
+
+        .social-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--gold-accent);
+            color: var(--navy-dark);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 25px auto 0;
+            text-align: center;
+            font-size: 0.88rem;
+        }
+
+        /* --- MODAL PARA "VER MÁS" EN SERVICIOS --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(6, 24, 48, 0.75);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: var(--white);
+            max-width: 550px;
+            width: 100%;
+            border-radius: 12px;
+            padding: 35px;
+            position: relative;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 18px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        .modal-content h3 {
+            color: var(--navy-dark);
+            margin-bottom: 15px;
+        }
+
+        .modal-content ul {
+            margin: 15px 0 25px 20px;
+            color: var(--text-dark);
+        }
+
+        .modal-content li {
+            margin-bottom: 8px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .hero-container, .mv-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--navy-dark);
+                padding: 25px;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / MENÚ DE NAVEGACIÓN -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="brand-logo">
+                <img src="img/logo.jpeg" alt="Granadeño, B&P, Asociados S.A. de C.V.">
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#propuesta">Propuesta de Valor</a></li>
+                <li><a href="#equipo">Socios</a></li>
+                <li><a href="#contacto-footer" class="btn-cotizar-nav">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO / INICIO -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div>
+                <span class="hero-badge">Firma de Auditoría, Contabilidad y Consultoría en El Salvador</span>
+                <h1>Granadeño, B&P, Asociados.</h1>
+                <p>
+                    Como especialistas en contabilidad, consultoría empresarial y auditoría en El Salvador, sabemos lo compleja que puede ser la correcta gestión financiera, tributaria y laboral de un negocio. Muchas veces, esa carga administrativa lleva a cometer errores o tomar malas decisiones que, con el tiempo, se traducen en multas, contingencias o pérdidas económicas considerables para las empresas.
+                </p>
+                <p>
+                    En <strong>Granadeño, B&P, Asociados</strong> trabajamos para transformar tus números en el crecimiento de tu empresa. Nos enfocamos en brindar orden, cumplimiento y claridad estratégica a través de soluciones integrales en contabilidad general, gestión tributaria, gestión laboral y auditoría, optimizando tus procesos para impulsar el desarrollo sostenible de tu negocio.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://wa.me/50372405579" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp</a>
+                    <a href="#servicios" class="btn-outline">Explorar Servicios</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <div class="logo-box">
+                    <img src="img/logo.jpeg" alt="Logo Granadeño, B&P, Asociados S.A. de C.V.">
+                </div>
+                <p style="font-size: 0.95rem; margin-bottom: 20px;">
+                    Déjanos formar parte de tu equipo y sumar nuestra experiencia al desarrollo de tu negocio.
+                </p>
+                <div class="hero-stat-grid">
+                    <div class="stat-item">
+                        <h4>+120</h4>
+                        <span>Clientes asesorados</span>
+                    </div>
+                    <div class="stat-item">
+                        <h4>100%</h4>
+                        <span>Cumplimiento normativo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDENTIDAD INSTITUCIONAL, MISIÓN, VISIÓN Y VALORES -->
+    <section id="nosotros" class="about-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Quiénes Somos</span>
+                <h2>Identidad Institucional</h2>
+                <p>Ética, transparencia y excelencia profesional al servicio del sector empresarial salvadoreño.</p>
+            </div>
+
+            <div class="identity-box">
+                <h3>GRANADEÑO, B & P, CONTADORES Y CONSULTORES, S.A. de C.V.</h3>
+                <p>
+                    Nació en el año <strong>2026</strong> como resultado de la visión compartida de cuatro profesionales de la Contaduría Pública y la Auditoría, quienes identificaron la creciente necesidad de ofrecer servicios contables, tributarios, financieros y de consultoría con un enfoque basado en la ética, la transparencia y la excelencia profesional.
+                </p>
+                <p>
+                    Conscientes de los constantes cambios en la normativa contable y tributaria de El Salvador, así como de la importancia de brindar información financiera confiable para la toma de decisiones empresariales, los cuatro socios decidieron unir sus conocimientos, experiencia y compromiso para crear una firma que ofreciera soluciones integrales a empresas, emprendedores, organizaciones sin fines de lucro y profesionales independientes.
+                </p>
+            </div>
+
+            <!-- Misión y Visión -->
+            <div class="mv-grid">
+                <div class="mv-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Misión</h3>
+                    <p>
+                        Proporcionar soluciones contables y de consultoría empresarial que contribuyan al fortalecimiento financiero y administrativo de nuestros clientes, garantizando calidad, ética y cumplimiento normativo en cada servicio prestado.
+                    </p>
+                </div>
+                <div class="mv-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Visión</h3>
+                    <p>
+                        Consolidarse como un despacho líder en asesoría contable y consultoría empresarial en El Salvador, reconocido por su excelencia técnica, innovación en procesos y compromiso con el desarrollo sostenible de las organizaciones.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Valores Institucionales -->
+            <div class="section-header" style="margin-bottom: 35px;">
+                <span class="section-subtitle">Nuestros Pilares</span>
+                <h2>Valores Institucionales</h2>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-eye"></i></div>
+                    <h4>Transparencia</h4>
+                    <p>Actuar con claridad y honestidad en cada proceso.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                    <h4>Responsabilidad</h4>
+                    <p>Cumplir con los compromisos adquiridos de manera profesional.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Confianza</h4>
+                    <p>Generar relaciones sólidas y duraderas con los clientes.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-award"></i></div>
+                    <h4>Excelencia</h4>
+                    <p>Buscar la mejora continua en los servicios ofrecidos.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h4>Ética Profesional</h4>
+                    <p>Respetar los principios normativos y legales de la contaduría pública.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Aportamos valor estratégico a su negocio</span>
+                <h2>Soluciones Integrales Especializadas</h2>
+                <p>Auditoría, Contabilidad, Consultoría y Asesoría Legal Mercantil diseñadas para blindar y hacer crecer su empresa.</p>
+            </div>
+
+            <!-- 4 Áreas Principales -->
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div>
+                        <div class="icon-box"><i class="fas fa-calculator"></i></div>
+                        <h3>Servicios de Contabilidad</h3>
+                        <p>De una contabilidad sana y ordenada depende la estabilidad y el crecimiento de su empresa. En Granadeño B&P nos encargamos de su gestión contable y cumplimiento fiscal para que usted tome decisiones con total seguridad.</p>
+                    </div>
+                    <button class="btn-ver-mas" onclick="openModal('contabilidad')">Ver más <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="pillar-card">
+                    <div>
+                        <div class="icon-box"><i class="fas fa-search-dollar"></i></div>
+                        <h3>Servicios de Auditoría</h3>
+                        <p>Respaldamos la transparencia financiera de su organización mediante metodologías de auditoría probadas y aplicadas con éxito en más de 120 clientes de diversos sectores.</p>
+                    </div>
+                    <button class="btn-ver-mas" onclick="openModal('auditoria')">Ver más <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="pillar-card">
+                    <div>
+                        <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+                        <h3>Servicios de Consultoría</h3>
+                        <p>Nuestro conocimiento y experiencia son factores clave para diseñar planes de trabajo estratégicos que optimicen los recursos y la rentabilidad de su negocio.</p>
+                    </div>
+                    <button class="btn-ver-mas" onclick="openModal('consultoria')">Ver más <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="pillar-card">
+                    <div>
+                        <div class="icon-box"><i class="fas fa-gavel"></i></div>
+                        <h3>Legal Mercantil</h3>
+                        <p>En Granadeño B&P contamos con un equipo especializado en Derecho Mercantil para brindar respaldo jurídico corporativo, prevención de riesgos y defensa técnica en procesos administrativos y comerciales.</p>
+                    </div>
+                    <button class="btn-ver-mas" onclick="openModal('legal')">Ver más <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Catálogo Detallado de Servicios Principales -->
+            <div class="services-list-box">
+                <h3>Catálogo de Servicios Principales</h3>
+                <ul class="services-checklist">
+                    <li><i class="fas fa-check-circle"></i> Contabilidad general y financiera</li>
+                    <li><i class="fas fa-check-circle"></i> Elaboración y análisis de estados financieros</li>
+                    <li><i class="fas fa-check-circle"></i> Asesoría fiscal y tributaria</li>
+                    <li><i class="fas fa-check-circle"></i> Consultoría administrativa y organizacional</li>
+                    <li><i class="fas fa-check-circle"></i> Implementación de sistemas contables y tecnológicos</li>
+                    <li><i class="fas fa-check-circle"></i> Capacitación en temas contables y financieros</li>
+                    <li><i class="fas fa-check-circle"></i> Servicios de auditoría externa, fiscal y financiera</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS / PROPUESTA DE VALOR -->
+    <section id="propuesta" class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Nuestra Propuesta de Valor</span>
+                <h2>¿Por qué elegir a Granadeño, B&P?</h2>
+            </div>
+
+            <div class="why-intro">
+                <p>
+                    Como especialistas en contabilidad, consultoría empresarial y auditoría en El Salvador, sabemos lo compleja que puede ser la correcta gestión financiera, tributaria y laboral de un negocio. Muchas veces, esa carga administrativa lleva a cometer errores o tomar malas decisiones que, con el tiempo, se traducen en multas, contingencias o pérdidas económicas considerables para las empresas.
+                </p>
+                <p>
+                    En <strong>Granadeño, B&P, Asociados S.A. de C.V.</strong> trabajamos para reducir ese margen de error. Nos enfocamos en brindar orden, cumplimiento y claridad estratégica mediante metodologías eficientes que optimizan costos y simplifican tus procesos operativos.
+                </p>
+            </div>
+
+            <div class="pillars-value-grid">
+                <div class="value-pillar">
+                    <h3><i class="fas fa-hands-helping"></i> Acompañamiento</h3>
+                    <p>
+                        En Granadeño, B&P, Asociados, no solo brindamos servicios contables, tributarios y de auditoría; acompañamos al cliente en cada etapa del desarrollo y crecimiento de su empresa. Aportamos herramientas prácticas para la toma de mejores decisiones y nos enfocamos en superar con éxito las complejidades y riesgos financieros, fiscales y laborales.
+                    </p>
+                </div>
+
+                <div class="value-pillar">
+                    <h3><i class="fas fa-user-tie"></i> Experiencia</h3>
+                    <p>
+                        Contamos con un equipo conformado por expertos en contabilidad, consultoría empresarial y auditoría, con una larga trayectoria y experiencia en el mercado salvadoreño. Un equipo orientado al crecimiento y a la mejora constante, capacitado y actualizado para hacer uso de las mejores prácticas aplicadas a nivel global.
+                    </p>
+                </div>
+
+                <div class="value-pillar">
+                    <h3><i class="fas fa-bullseye"></i> Confianza y Enfoque</h3>
+                    <p>
+                        El acompañamiento que brinda Granadeño, B&P, Asociados permite a nuestros clientes enfocarse en lo más importante para sus negocios, que es el desarrollo y crecimiento, mientras nosotros nos hacemos cargo de la gestión contable, tributaria, laboral y financiera.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPO DIRECTIVO / SOCIOS FUNDADORES (SOLO IMÁGENES) -->
+    <section id="equipo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Socios Directores</h2>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="img/socio1.jpeg" alt="Socio Director 1" class="team-photo">
+                </div>
+
+                <div class="team-card">
+                    <img src="img/socio2.jpeg" alt="Socio Director 2" class="team-photo">
+                </div>
+
+                <div class="team-card">
+                    <img src="img/socio3.jpeg" alt="Socio Director 3" class="team-photo">
+                </div>
+
+                <div class="team-card">
+                    <img src="img/socio4.jpeg" alt="Socia Directora 4" class="team-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto-footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">
+                    <img src="img/logo.jpeg" alt="Granadeño, B&P, Asociados S.A. de C.V.">
+                </div>
+                <h4 style="margin-bottom: 6px; font-size: 1.2rem;">Granadeño B&P, Asociados</h4>
+                <p style="color: #cbd5e1; font-weight: 600; margin-bottom: 10px;">
+                    Despacho de Contabilidad y Consultoría en El Salvador.
+                </p>
+                <p style="font-style: italic; color: var(--gold-accent); margin-bottom: 18px;">
+                    “Transformando tus números en el crecimiento de tu empresa”
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@granadeno_byp_asociados?lang=es" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/granadenobypasociados/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61596285615348" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/granade%C3%B1o-byp-asociados-693b5544b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/50372405579" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#nosotros">Identidad Institucional</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#propuesta">Propuesta de Valor</a></li>
+                    <li><a href="#equipo">Socios Directores</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contáctanos</h4>
+                <ul class="footer-links">
+                    <li>
+                        <i class="fas fa-map-marker-alt" style="color: var(--gold-accent); width: 20px;"></i>
+                        9 calle Poniente #3843 Col. Escalón, San Salvador, El Salvador.
+                    </li>
+                    <li>
+                        <i class="fab fa-whatsapp" style="color: var(--gold-accent); width: 20px;"></i>
+                        <a href="https://wa.me/50372405579" target="_blank" rel="noopener noreferrer">WhatsApp: +503 7240 5579</a>
+                    </li>
+                    <li>
+                        <i class="fab fa-tiktok" style="color: var(--gold-accent); width: 20px;"></i>
+                        <a href="https://www.tiktok.com/@granadeno_byp_asociados?lang=es" target="_blank" rel="noopener noreferrer">TikTok: @granadeno_byp_asociados</a>
+                    </li>
+                    <li>
+                        <i class="fab fa-instagram" style="color: var(--gold-accent); width: 20px;"></i>
+                        <a href="https://www.instagram.com/granadenobypasociados/" target="_blank" rel="noopener noreferrer">Instagram: granadenobypasociados</a>
+                    </li>
+                    <li>
+                        <i class="fab fa-facebook-f" style="color: var(--gold-accent); width: 20px;"></i>
+                        <a href="https://www.facebook.com/profile.php?id=61596285615348" target="_blank" rel="noopener noreferrer">Facebook Oficial</a>
+                    </li>
+                    <li>
+                        <i class="fab fa-linkedin-in" style="color: var(--gold-accent); width: 20px;"></i>
+                        <a href="https://www.linkedin.com/in/granade%C3%B1o-byp-asociados-693b5544b/" target="_blank" rel="noopener noreferrer">LinkedIn Oficial</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 GRANADEÑO, B & P, ASOCIADOS S.A. DE C.V. Todos los derechos reservados. San Salvador, El Salvador.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DETALLES DE SERVICIO -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Detalle del Servicio</h3>
+            <p id="modalDesc"></p>
+            <ul id="modalList"></ul>
+            <a href="https://wa.me/50372405579" target="_blank" rel="noopener noreferrer" class="btn-primary" onclick="closeModal()"><i class="fab fa-whatsapp"></i> Consultar por WhatsApp</a>
+        </div>
+    </div>
+
+    <script>
+        // Menú móvil
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Datos detallados para los botones "Ver más"
+        const serviceDetails = {
+            contabilidad: {
+                title: "Servicios de Contabilidad",
+                desc: "Garantizamos registros contables exactos y oportunos bajo NIIF para PYMES y normativa salvadoreña vigente:",
+                items: [
+                    "Contabilidad general y financiera mensual.",
+                    "Elaboración, presentación y análisis de estados financieros.",
+                    "Control de inventarios, activos fijos y conciliaciones bancarias.",
+                    "Gestión laboral: planillas, ISSS, AFP y retenciones de renta.",
+                    "Declaraciones tributarias mensuales y anuales (IVA, Pago a Cuenta, Renta)."
+                ]
+            },
+            auditoria: {
+                title: "Servicios de Auditoría",
+                desc: "Evaluación objetiva e independiente para brindar credibilidad ante socios, bancos y autoridades fiscales:",
+                items: [
+                    "Auditoría financiera externa bajo Normas Internacionales de Auditoría (NIA).",
+                    "Dictamen e informe fiscal ante el Ministerio de Hacienda.",
+                    "Auditoría preventiva de cumplimiento tributario y laboral.",
+                    "Evaluación de control interno y mitigación de riesgos operativos."
+                ]
+            },
+            consultoria: {
+                title: "Servicios de Consultoría",
+                desc: "Acompañamiento estratégico para mejorar la rentabilidad y eficiencia operativa de su organización:",
+                items: [
+                    "Consultoría administrativa, financiera y organizacional.",
+                    "Implementación y parametrización de sistemas contables y tecnológicos.",
+                    "Evaluación de proyectos de inversión y proyecciones de flujo de efectivo.",
+                    "Capacitación especializada en temas contables, fiscales y financieros."
+                ]
+            },
+            legal: {
+                title: "Asesoría Legal Mercantil",
+                desc: "Respaldo jurídico corporativo integral para proteger el patrimonio y las operaciones de su empresa:",
+                items: [
+                    "Constitución de sociedades, modificaciones de pacto social y gobierno corporativo.",
+                    "Elaboración y revisión de contratos mercantiles y laborales.",
+                    "Prevención de riesgos legales y cumplimiento registral (CNR / Alcaldías).",
+                    "Defensa técnica en procesos administrativos y comerciales."
+                ]
+            }
+        };
+
+        function openModal(key) {
+            const data = serviceDetails[key];
+            document.getElementById('modalTitle').textContent = data.title;
+            document.getElementById('modalDesc').textContent = data.desc;
+            const list = document.getElementById('modalList');
+            list.innerHTML = '';
+            data.items.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                list.appendChild(li);
+            });
+            document.getElementById('serviceModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('serviceModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('serviceModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
